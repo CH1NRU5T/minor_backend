@@ -17,7 +17,7 @@ mongoose.connect(DB, {
   console.log("DB CONNECTED!")
 })
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 80
 
 const server = app.listen(PORT, ()=>{
     displayRoutes(app);
