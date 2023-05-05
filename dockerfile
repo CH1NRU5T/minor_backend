@@ -1,6 +1,6 @@
 FROM node:14
 
-WORKDIR /DCRYPTOR-BACKEND
+WORKDIR /
 
 COPY package.json package.json
 COPY package-lock.json package-lock.json
