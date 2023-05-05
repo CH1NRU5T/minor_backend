@@ -245,6 +245,7 @@ def decode(string, stop):
         return 1
 
 def main(string=args.string):
+    print('main called')
     global decoded
     decoded = []
     decode(string, 'none')
