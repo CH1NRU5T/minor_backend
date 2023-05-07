@@ -11,8 +11,8 @@ RUN apt-get update -y
 RUN apt-get install python -y
 RUN apt-get install python3-pip -y
 # RUN pip3 install -r requirements.txt
-RUN pip3 install bs4
-RUN pip3 install requests
+RUN pip install bs4
+RUN pip install requests
 
 EXPOSE 80
 CMD  ["npm", "start"]
