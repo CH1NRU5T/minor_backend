@@ -9,8 +9,8 @@ COPY . .
 RUN npm install
 RUN apt-get update -y
 RUN apt-get install python -y
-RUN apt-get install python3-bs4 -y
-RUN apt-get install python3-requests -y
+RUN apt-get install python-bs4 -y
+RUN apt-get install python-requests -y
 # RUN apt-get install python3-pip -y
 # RUN pip3 install -r requirements.txt
 # RUN pip install bs4
