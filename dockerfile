@@ -13,8 +13,8 @@ RUN apt-get install python3-pip -y
 # RUN pip3 install -r requirements.txt
 # RUN pip install bs4
 # RUN pip install requests
-sudo apt-get install python3-bs4 -y
-sudo apt-get install python3-requests -y
+RUN apt-get install python3-bs4 -y
+RUN apt-get install python3-requests -y
 
 EXPOSE 80
 CMD  ["npm", "start"]
