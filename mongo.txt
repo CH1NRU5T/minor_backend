@@ -1,0 +1,1 @@
+mongodb+srv://chinrust:chinrust@cluster0.3eti2x1.mongodb.net/?retryWrites=true&w=majority

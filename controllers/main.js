@@ -1,4 +1,4 @@
-const { spawn } = require("child_process");
+const { spawn, exec } = require("child_process");
 const { once } = require("events");
 const base64 = require("./base64");
 const history = require("./../models/historyModal");
@@ -6,15 +6,13 @@ const { decode } = require("punycode");
 
 //Function to Run decodify Script using NodeJS built-In Module Child-process (https://nodejs.org/api/child_process.html)
 const decodify = async (data) => {
-  console.log("decodify called from js");
-  const command = spawn(`python`, [`-u`, `${__dirname}/decodify.py`, data]);
-  console.log(command);
+  const ex = exec(`python -u ${__dirname}/decodify.py ${data}`);
   let decoded_data = "";
-  command.stdout.on("data", (data) => {
+
+  ex.stdout.on("data", (data) => {
     decoded_data += data;
   });
-  await once(command, "close");
-  console.log(decoded_data);
+  await once(ex, "close");
   return decoded_data;
 };
 
