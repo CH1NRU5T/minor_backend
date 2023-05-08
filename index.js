@@ -37,7 +37,6 @@ const bad_data = (req, res, next) => {
     }
   }
   if (flag != 0 || data.length > 1200) {
-    console.log("length = ", data.length);
     res.status(400).json({
       status: "Failed",
       message: "Failed to decode",
